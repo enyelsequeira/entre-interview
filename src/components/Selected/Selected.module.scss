@@ -1,0 +1,40 @@
+.container{
+  max-width: 616px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+}
+.date{
+  width: 329px;
+}
+
+.time{
+  width: 255px;
+}
+.title{
+  width: 101px;
+  height: 17px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+  margin-bottom: 0.75rem;
+}
+.subTitle{
+  width: 255px;
+  height: 57px;
+  background: #FFFFFF;
+  border: 1px solid #B9B9B9;
+  border-radius: 8px;
+  padding: 20px 0 20px 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4F4F4F;
+
+}

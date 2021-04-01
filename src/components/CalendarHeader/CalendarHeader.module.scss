@@ -1,0 +1,37 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  max-width: 616px;
+  margin-top: 2rem;
+  margin-bottom: 1.75rem;
+  .text{
+    .title{
+        width: 155px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 160%;
+        color: #18243A;
+        margin-bottom: 0.5rem;
+
+    }
+
+    .subtitle{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        
+        color: #BDBDBD;
+    };
+   
+}
+button{
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  outline: none;
+}
+}
