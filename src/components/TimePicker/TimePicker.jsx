@@ -1,12 +1,8 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable no-unused-vars */
-/* eslint-disable implicit-arrow-linebreak */
 import React, { useContext } from 'react';
 import { RiArrowDownSLine, RiArrowUpSLine } from 'react-icons/ri';
 import { GlobalContext } from '../../contexts/globalContext';
 import styles from './TimePicker.module.scss';
-
-const times = ['am', 'pm'];
 
 const TimePickers = () => {
   const {
@@ -54,9 +50,8 @@ const TimePickers = () => {
       </div>
 
       <ul className={styles.times}>
-        {
-          times.map((t) => <button key={t} type="button">{t.toUpperCase()}</button>)
-         }
+        <button type="button">Am</button>
+        <button type="button">Pm</button>
       </ul>
 
     </div>

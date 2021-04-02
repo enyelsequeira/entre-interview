@@ -11,16 +11,17 @@ import styles from './Calendar.module.scss';
 
 const Calendars = () => {
   const {
-    changeStartDate, startDate, hour, type, changeEndDate, minute
+    changeStartDate, hour, type, changeEndDate, minute, endDate
   } = useContext(GlobalContext);
 
   const [value, onChange] = useState(new Date());
+  const time = `${hour}:${minute}`;
 
   const onChanged = () => {
     if (type === 'start') {
-      changeStartDate(`${months[value.getMonth()]} ${value.getDate()}, ${value.getFullYear()}, ${hour}`);
+      changeStartDate(`${months[value.getMonth()]} ${value.getDate()}, ${value.getFullYear()}`, time);
     } else if (type === 'end') {
-      changeEndDate(`${months[value.getMonth()]} ${value.getDate()}, ${value.getFullYear()}`);
+      changeEndDate(`${months[value.getMonth()]} ${value.getDate()}, ${value.getFullYear()}`, time);
     }
   };
 
@@ -36,7 +37,7 @@ const Calendars = () => {
         />
         <TimePickers />
       </div>
-      <Selected calendarSelected="selected date" calendarSelectedDay={startDate} calendarSelectedTime="selected time" calendarSelectedHour={`${hour}: ${minute}`} />
+      <Selected calendarSelected="selected date" calendarSelectedDay={endDate} calendarSelectedTime="selected time" calendarSelectedHour={`${hour}: ${minute}`} />
       <CalendarButtons />
 
     </div>

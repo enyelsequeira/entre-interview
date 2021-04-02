@@ -8,11 +8,8 @@ const CalendarButtons = () => {
 
   return (
     <div className={styles.container}>
-      <Btn text="Cancel" closeModal={closeModal} />
-      <Btn text="Done" />
-
-      {/* <button className={styles.cancel} type="button">Cancel</button>
-    <button className={styles.done} type="button">Done</button> */}
+      <Btn text="Cancel" calendar closeModal={closeModal} />
+      <Btn text="Done" calendar />
 
     </div>
   );

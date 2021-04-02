@@ -33,8 +33,16 @@
     text-align: center;
     color: #B9B9B9;
     outline: none;
+    text-transform: uppercase;
     &:hover{
       cursor: pointer;
+   
+        background: #33CCFF;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #FFFFFF;
+ 
+      
     }
   }
 }

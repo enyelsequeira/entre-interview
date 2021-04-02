@@ -22,3 +22,38 @@ color: #B9B9B9;
   color: #FFFFFF;
   background: #003399;
 }
+.am{
+    width: 28px;
+    height: 26px;
+    border: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    color: #a30404;
+    outline: none;
+    &:hover{
+      cursor: pointer;
+    }
+
+}
+
+.pm{
+    width: 28px;
+    height: 26px;
+    border: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    color: #d80404;
+    outline: none;
+    &:hover{
+      cursor: pointer;
+    }
+
+}

@@ -15,7 +15,7 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     background: '#F2F2F2',
-    opacity: '0.8',
+    opacity: '0.7',
   },
 };
 
