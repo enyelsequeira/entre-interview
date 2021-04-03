@@ -4,6 +4,7 @@ import styles from './App.module.scss';
 import Calendar from './components/Calendar/Calendar';
 import Selected from './components/Selected/Selected';
 import { GlobalContext } from './contexts/globalContext';
+import { useTimeContext } from './contexts/timePickerContext';
 
 const customStyles = {
   content: {
@@ -20,11 +21,28 @@ const customStyles = {
 };
 
 function App() {
-  const { modalIsOpen, closeModal } = useContext(GlobalContext);
+  const {
+    modalIsOpen, closeModal, startDate, openModal,
+    endDate, dayNight,
+  } = useContext(GlobalContext);
+  const {
+    startHour,
+    startMinute,
+    endHour,
+    endMinute,
+  } = useTimeContext();
+
+  console.log('dayNight', dayNight);
+
+  const startTime = `${startHour}:${startMinute}:${dayNight}`;
+  const endTime = `${endHour}:${endMinute}:${dayNight}`;
+
   return (
     <div className={styles.container}>
 
-      <Selected start="start date" end="end date" />
+      <Selected title="start date" date={startDate} time={startTime} openFunc={() => openModal('start')} />
+
+      <Selected title="end date" date={endDate} time={endTime} openFunc={() => openModal('end')} />
 
       <Modal
         isOpen={modalIsOpen}
@@ -35,7 +53,6 @@ function App() {
         <Calendar />
 
       </Modal>
-
     </div>
   );
 }

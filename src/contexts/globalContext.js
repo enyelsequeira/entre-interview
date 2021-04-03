@@ -8,16 +8,21 @@ const GlobalContext = createContext();
 const GlobalProvider = ({ children }) => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [startDate, setStartDate] = useState('March 12, 2020');
-  const [endDate, setEndDate] = useState('March 12, 2021');
+  const [endDate, setEndDate] = useState('March 24, 2021');
   const [type, setType] = useState(null);
 
-  const [hour, setHour] = useState(0);
-  const [minute, setMinute] = useState(0);
+  const [startHour, setStartHour] = useState(0);
+  const [startMinute, setStartMinute] = useState(0);
 
-  const [dayNight, setDayNight] = ('AM');
+  const [endHour, setEndHour] = useState(0);
+  const [endMinute, setEndMinute] = useState(0);
 
-  const changeDayNight = (value, time) => {
-    setDayNight(value, time);
+  const [dayNight, setDayNight] = useState('AM');
+  const [endDayNight, setEnd]
+  // console.log(dayNight);
+
+  const changeDayNight = (value) => {
+    setDayNight(value);
   };
 
   const changeStartDate = (day, time) => {
@@ -33,11 +38,6 @@ const GlobalProvider = ({ children }) => {
   };
   const closeModal = () => setIsOpen(false);
 
-  // useEffect(() => {
-  //   // changeStartDate();
-  //   // changeEndDate();
-  // }, [changeStartDate]);
-
   return (
     <GlobalContext.Provider value={{
       startDate,
@@ -47,10 +47,15 @@ const GlobalProvider = ({ children }) => {
       closeModal,
       changeEndDate,
       changeStartDate,
-      hour,
-      setHour,
-      minute,
-      setMinute,
+      startHour,
+      setStartHour,
+      startMinute,
+      setStartMinute,
+      endHour,
+      setEndHour,
+      endMinute,
+      setEndMinute,
+      dayNight,
       type,
       changeDayNight,
     }}
