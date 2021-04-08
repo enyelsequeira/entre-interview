@@ -36,12 +36,10 @@ const reducer = (state, action) => {
 
 const TimeContext = createContext(null);
 
-const checkLimit = (limit, checkValue) => {
-  console.log('checkValue', checkValue);
-  console.log('limit', limit);
-
-  return checkValue > 0 && checkValue <= limit;
-};
+const checkLimit = (limit, checkValue) => checkValue < 0 || checkValue <= limit;
+// console.log('checkValue', checkValue);
+//! ERROR this is my error above
+// console.log('limit', limit);
 
 const TimeProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
