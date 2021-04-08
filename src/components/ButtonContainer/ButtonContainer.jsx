@@ -9,7 +9,7 @@ const CalendarButtons = () => {
   return (
     <div className={styles.container}>
       <Btn text="Cancel" calendar closeModal={closeModal} />
-      <Btn text="Done" calendar />
+      <Btn text="Done" calendar closeModal={closeModal} />
 
     </div>
   );
