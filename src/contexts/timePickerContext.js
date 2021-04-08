@@ -40,7 +40,7 @@ const checkLimit = (limit, checkValue) => {
   console.log('checkValue', checkValue);
   console.log('limit', limit);
 
-  return checkValue < 0 || checkValue <= limit - 1;
+  return checkValue > 0 && checkValue <= limit;
 };
 
 const TimeProvider = (props) => {

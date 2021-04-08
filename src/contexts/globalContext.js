@@ -17,14 +17,6 @@ const GlobalProvider = ({ children }) => {
   const [endHour, setEndHour] = useState(0);
   const [endMinute, setEndMinute] = useState(0);
 
-  const [dayNight, setDayNight] = useState('AM');
-  const [endDayNight, setEnd]
-  // console.log(dayNight);
-
-  const changeDayNight = (value) => {
-    setDayNight(value);
-  };
-
   const changeStartDate = (day, time) => {
     setStartDate(day, time);
   };
@@ -55,9 +47,8 @@ const GlobalProvider = ({ children }) => {
       setEndHour,
       endMinute,
       setEndMinute,
-      dayNight,
       type,
-      changeDayNight,
+
     }}
     >
       {children}

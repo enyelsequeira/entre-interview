@@ -32,8 +32,6 @@ function App() {
     endMinute,
   } = useTimeContext();
 
-  console.log('dayNight', dayNight);
-
   const startTime = `${startHour}:${startMinute}:${dayNight}`;
   const endTime = `${endHour}:${endMinute}:${dayNight}`;
 
